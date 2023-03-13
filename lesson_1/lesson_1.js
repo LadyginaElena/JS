@@ -7,9 +7,24 @@ let a = 3
 let b = 2
 let c
 
+//variant1
 c = a
 a = b
 b = c
 
+console.log(a)
+console.log(b)
+
+//variant2
+a = a + b
+b = a - b
+a = a - b
+console.log(a)
+console.log(b)
+
+//variant3
+a = a * b
+b = a / b
+a = a / b
 console.log(a)
 console.log(b)
