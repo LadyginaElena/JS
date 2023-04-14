@@ -90,11 +90,27 @@ console.log(text_2)
 
 
 //Нарисовать елочку и ромб  с помощью циклов 
-//let hight = 5
-//let widght = 10
-//a = "*"
-//for (let i = 0; i < hight; i++) {
-    //for (let j = 0; j < widght; j = j + 2) {
-        //console.log(a)
-    //}
+let hight = 5
+let star = ""
+let tree = ""
+
+for (let i = 1; i < hight; i++) {
+    let space =" "
+    for (let j = 1;  j < hight-i; j++) {
+        space += " "
+    } 
+    for (let k = 1; k < hight; k++)  {
+        star += "*"
+        //console.log (star)
+}   console.log (space+star)
+    
+}   //console.log ("\n")
+
+
+
+//for (let i = hight; i>=1; i--){
+//    let str=""
+ //   for (let j = i; j>=1; j--){
+ //       str=str+j
+  //  } console.log(str)
 //}
