@@ -17,3 +17,6 @@ function CollatzConjecture(number) {
 
 CollatzConjecture(321)
 
+const digitize = (n) => Array.from(n+"").reverse() 
+
+console.log(digitize(3251))
