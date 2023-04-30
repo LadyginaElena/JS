@@ -5,8 +5,27 @@
 
 let str = "Anna"
 
-let palindronFunction = a => a.toLowerCase === a.toLowerCase().split("").reverse().join("")
+let palindronFunction = a => a.toLowerCase() === a.toLowerCase().split("").reverse().join("")
 
 console.log(palindronFunction(str))
 
 //2. Если вы решали задачку со скобками без методов, то сейчас решите с методами.
+
+//3.Напишите функцию filterLucky/ filter_lucky(), которая принимает список целых чисел и фильтрует список, чтобы включить только элементы, содержащие цифру 7.
+var filterLucky = x => {
+    let arr = []
+    for (el of x) {
+        arr.push(String(el))
+    }
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] == 7) {
+                newArr.push(+arr[i])
+            }
+        }
+    } return newArr
+}
+
+x = [1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17]
+console.log(filterLucky(x))
