@@ -29,3 +29,27 @@ var filterLucky = x => {
 
 x = [1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17]
 console.log(filterLucky(x))
+
+
+function removeRotten(bagOfFruits) {
+    return bagOfFruits.toString().toLowerCase().replace(/rotten/g, '').split(",")
+}
+
+let bagOfFruits = ["apple", "rottenBanana", "kiwi", "melone", "orange"]
+
+console.log(removeRotten(bagOfFruits))
+
+
+
+function twoOldestAges(ages){
+    let age = []
+    ages.sort((a,b) => a - b)
+
+    age[0] = ages.at(-2)
+    age[1] =ages.at(-1)
+    return age
+}
+
+let ages = [1,5,87,45,8,8]
+
+console.log(twoOldestAges(ages))
