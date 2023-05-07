@@ -41,15 +41,34 @@ console.log(removeRotten(bagOfFruits))
 
 
 
-function twoOldestAges(ages){
+function twoOldestAges(ages) {
     let age = []
-    ages.sort((a,b) => a - b)
+    ages.sort((a, b) => a - b)
 
     age[0] = ages.at(-2)
-    age[1] =ages.at(-1)
+    age[1] = ages.at(-1)
     return age
 }
 
-let ages = [1,5,87,45,8,8]
+let ages = [1, 5, 87, 45, 8, 8]
 
 console.log(twoOldestAges(ages))
+
+
+function stringy(size) {
+    let newArr = []
+    do {
+        newArr.push("1")
+        size = --size
+        if (size > 0) {
+            newArr.push("0")
+            size = --size
+        }
+    }
+    while (size > 0)
+    return newArr.join("")
+}
+
+size = 10
+
+console.log(stringy(size))
