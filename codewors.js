@@ -20,3 +20,18 @@ let list = [
 
 
 console.log(countLanguages(list))
+
+function createDict(keys, values){
+  let dict = {}
+  for (let i=0; i< keys.length; i++){
+    if (i < values.length){
+      dict[keys[i]] = values[i]
+    }
+    else{
+      dict[keys[i]] = null
+    }
+  } return dict
+}
+keys = ['a', 'b', 'c', 'd']
+values = [1, 2, 3]
+console.log(createDict(keys, values))
