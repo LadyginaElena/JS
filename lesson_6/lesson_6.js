@@ -72,3 +72,23 @@ function stringy(size) {
 size = 10
 
 console.log(stringy(size))
+
+// Задача на работу с объектом
+let logs = [{action: "A" , userID : 1}, {action: "A" , userID : 2},{action: "В" , userID : 3}, {action: "B" , userID : 1}, {action: "C" , userID : 1}]
+function stringABC(logs) 
+let abc={}
+for (let i=0; i<logs.length; i++){
+    let key = logs[i].userID
+    if (key in abc){
+        abc[key]+=logs[i].action
+    }else {
+        abc[key] = logs[i].action
+
+    }
+} 
+for (let user in abc){
+     if (abc[user].includes("ABC")){
+        return (`User ID = ${user}`)
+     }
+}
+console.log (stringABC(logs))
