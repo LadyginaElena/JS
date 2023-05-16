@@ -35,3 +35,61 @@ function createDict(keys, values){
 keys = ['a', 'b', 'c', 'd']
 values = [1, 2, 3]
 console.log(createDict(keys, values))
+
+
+//Write a function that removes the spaces from the string, then return the resultant string.
+
+function noSpace(x){
+  return x.split(" ").join("")
+}
+
+let x='8 j 8   mBliB8g  imjB8B8  jl  B'
+
+console.log(noSpace(x))
+
+//Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+  return array.length!=0 ? array.map(el => -el): array
+}
+ let array = [1,2,3,4,5]
+
+ console.log(invert(array))
+
+ //Given a non-empty array of integers, return the result of multiplying the values together in order.
+
+ function grow(x){
+  return x.reduce((a,b)=> a*b)
+}
+
+x = [1, 2, 3]
+console.log(grow(x))
+//Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+function howMuchILoveYou(nbPetals) {
+  let petal = nbPetals%6
+  switch(petal){
+      case 1:
+      return "I love you"
+      break;
+      
+      case 2:
+      return "a little"
+      break;
+      case 3:
+      return "a lot"
+      break;
+      case 4:
+      return "passionately"
+      break;
+      case 5:
+      return "madly"
+      break;
+      case 0:
+      return "not at all"
+      break;
+  }
+}
+
+console.log (howMuchILoveYou(nbPetals))
+nbPetals = 198
