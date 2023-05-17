@@ -93,3 +93,39 @@ function howMuchILoveYou(nbPetals) {
 
 console.log (howMuchILoveYou(nbPetals))
 nbPetals = 198
+
+//Training JS #32: methods of Math---round() ceil() and floor()
+function roundIt(n){
+  let newArr = n.toString().split(".")
+  let left = newArr.shift().length
+  let right = newArr.pop().length
+  console.log(left)
+  console.log(right)
+  if (left*1<right*1){
+    return Math.ceil(n)
+  }
+  else if (left*1>right*1){return Math.floor(n)}
+  else{
+    return Math.round(n)
+  }
+}
+
+console.log(roundIt(3.45))
+console.log(roundIt(34.5))
+console.log(roundIt(34.45))
+
+//Going to the cinema
+function movie(card, ticket, perc) {
+  let count = 0
+  let sisA = 0
+  let sisB = card
+  let newTicket = ticket
+  while (Math.ceil(sisB)>=Math.ceil(sisA)){
+       sisA+=ticket
+       newTicket = newTicket*perc
+       sisB +=newTicket
+       count++
+  }
+  return count
+}
+console.log (movie(100, 10, 0.95))
