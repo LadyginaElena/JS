@@ -156,3 +156,15 @@ function vowelStart(str){
 
  let str = 'It is beautiful weather today!'
  console.log (vowelStart(str))
+
+ //Using n as a parameter in the function pattern, where n>0, complete the codes to get the pattern
+ function pattern(n){
+  var output="1\n";
+  for (let i=1; i<n; i++){
+    output+=1+"*".repeat(i)+`${i+1}\n`
+  }
+  let newStr = output.slice(0,-1)
+  return newStr
+ }
+  n=3
+  console.log(pattern(n))
