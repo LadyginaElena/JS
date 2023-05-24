@@ -168,3 +168,19 @@ function vowelStart(str){
  }
   n=3
   console.log(pattern(n))
+
+
+  //Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+  function min(arr, toReturn) {
+    let min = Math.min(...arr)
+    if (toReturn =="value"){
+      return min
+    }
+    else {
+      return arr.indexOf(min)
+    }
+  }
+
+  let arr = [1,2,3,4,5]
+  let toReturn = "value"
+  console.log(min(arr, toReturn))
