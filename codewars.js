@@ -66,33 +66,37 @@ x = [1, 2, 3]
 console.log(grow(x))
 //Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
 
-function howMuchILoveYou(nbPetals) {
-  let petal = nbPetals%6
-  switch(petal){
-      case 1:
-      return "I love you"
-      break;
-      
-      case 2:
-      return "a little"
-      break;
-      case 3:
-      return "a lot"
-      break;
-      case 4:
-      return "passionately"
-      break;
-      case 5:
-      return "madly"
-      break;
-      case 0:
-      return "not at all"
-      break;
-  }
-}
 
-console.log (howMuchILoveYou(nbPetals))
-nbPetals = 198
+//function howMuchILoveYou(nbPetals) {
+  //let petal = nbPetals%6
+  //switch(petal){
+     // case 1:
+      //return "I love you"
+      //break;
+      
+      //case 2:
+     // return "a little"
+     // break;
+      //case 3:
+      //return "a lot"
+      //break;
+      //case 4:
+      //return "passionately"
+      //break;
+      //case 5:
+      //return "madly"
+      //break;
+      //case 0:
+      //return "not at all"
+      //break;
+ // }
+//}
+
+
+//nbPetals = 198
+
+//console.log (howMuchILoveYou(nbPetals))
+
 
 //Training JS #32: methods of Math---round() ceil() and floor()
 function roundIt(n){
@@ -109,6 +113,7 @@ function roundIt(n){
     return Math.round(n)
   }
 }
+
 
 console.log(roundIt(3.45))
 console.log(roundIt(34.5))
@@ -129,3 +134,25 @@ function movie(card, ticket, perc) {
   return count
 }
 console.log (movie(100, 10, 0.95))
+
+//Create a function that takes any sentence and redistributes the spaces (and adds additional spaces if needed) so that each word starts with a vowel
+
+function vowelStart(str){
+  let repStr = str.replaceAll(/\W+/g,"").toLowerCase()
+  repStr = repStr.replaceAll(/_/g,"")
+  console.log(repStr)
+  let newStr=""
+  let abc = "aieou"
+  for (let x of repStr){
+    if (abc.includes(x) ){
+      newStr+=" "+x
+    }
+    else {
+      newStr+=x
+    }
+  }
+  return newStr.trimStart()
+  }
+
+ let str = 'It is beautiful weather today!'
+ console.log (vowelStart(str))
